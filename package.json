@@ -1,15 +1,46 @@
 {
   "name": "css-booster",
-  "version": "1.0.0",
   "description": "다양한 css 디자인을 제공하는 라이브러리",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "browser": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyooo11/css-booster"
   },
   "keywords": [
-    "personal-library",
+    "react",
     "css"
   ],
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
   "author": "shin hyo jin <tlsgywls1107@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.9",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.19.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }
