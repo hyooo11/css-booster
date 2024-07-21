@@ -5,23 +5,11 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 export default {
   input: "src/index.tsx",
-  output: [
-    {
-      dir: "./dist",
-      format: "cjs",
-      preserveModules: true,
-      preserveModulesRoot: "src",
-    },
-    {
-      file: "./dist/index.es.js",
-      format: "es",
-    },
-    {
-      name: "css-booster",
-      file: "./dist/index.umd.js",
-      format: "umd",
-    },
-  ],
+  output: {
+    file: "./dist/index.js",
+    format: "es",
+    sourcemap: true,
+  },
   plugins: [
     // 바벨 트랜스파일러 설정
     babel({
@@ -35,7 +23,6 @@ export default {
     }),
     peerDepsExternal(),
     commonjs({ include: "node_modules/**" }),
-    // 타입스크립트
     typescript(),
   ],
   external: ["react", "react-dom"],
