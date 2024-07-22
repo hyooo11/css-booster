@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, CSSProperties } from "react";
 import styles from "./Button.module.css";
 
-interface ButtonProps {
+export interface ButtonProps {
   children: ReactNode;
   variant?: "primary" | "secondary" | "danger";
   style?: CSSProperties;
