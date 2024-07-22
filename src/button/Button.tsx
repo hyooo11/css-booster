@@ -2,12 +2,12 @@ import React, { FC, ReactNode, CSSProperties } from "react";
 import styles from "./Button.module.css";
 
 export interface ButtonProps {
-  children: ReactNode;
+  text: string;
   variant?: "primary" | "secondary" | "danger";
   style?: CSSProperties;
 }
 
-const Button: FC<ButtonProps> = ({ children, variant, style = {} }) => {
+const Button: FC<ButtonProps> = ({ text, variant, style = {} }) => {
   return (
     <button
       className={`${styles.button} ${
@@ -15,7 +15,7 @@ const Button: FC<ButtonProps> = ({ children, variant, style = {} }) => {
       }`}
       style={style}
     >
-      {children}
+      {text}
     </button>
   );
 };
