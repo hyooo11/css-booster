@@ -1,0 +1,16 @@
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.primary {
+  background: blue;
+}
+.secondary {
+  background: red;
+}
+.danger {
+  background: yellow;
+}

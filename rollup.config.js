@@ -1,4 +1,5 @@
 import babel from "@rollup/plugin-babel";
+import postcss from "rollup-plugin-postcss";
 import typescript from "@rollup/plugin-typescript";
 import commonjs from "rollup-plugin-commonjs";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
@@ -20,6 +21,11 @@ export default {
         "@babel/preset-typescript",
       ],
       extensions: [".js", ".jsx", ".ts", ".tsx"],
+    }),
+    postcss({
+      extract: false, // Separate CSS file extraction
+      modules: true,
+      use: ["sass"], // Optional: if you're using Sass
     }),
     peerDepsExternal(),
     commonjs({ include: "node_modules/**" }),

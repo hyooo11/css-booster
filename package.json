@@ -30,12 +30,15 @@
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "postcss": "^8.4.39",
+    "postcss-modules": "^6.0.0",
     "rollup": "^4.19.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.6.3",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "typescript-plugin-css-modules": "^5.1.0"
   },
   "peerDependencies": {
     "@types/react": "^18.3.3",
