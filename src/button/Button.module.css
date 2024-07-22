@@ -6,12 +6,21 @@
   font-size: 16px;
   color: #fff;
 }
+.default {
+  background-color: #eeedeb;
+  color: #e6b9a6;
+}
 .primary {
-  background: blue;
+  background: #e6b9a6;
+  color: #fff;
 }
 .secondary {
-  background: red;
+  background: #939185;
 }
+.success {
+  background: #2f3645;
+}
+
 .danger {
-  background: yellow;
+  background: #d60101;
 }

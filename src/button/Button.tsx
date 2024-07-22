@@ -2,20 +2,21 @@ import React, { FC, ReactNode, CSSProperties } from "react";
 import styles from "./Button.module.css";
 
 export interface ButtonProps {
-  text: string;
-  variant?: "primary" | "secondary" | "danger";
+  children: ReactNode;
+  variant?: "default" | "primary" | "secondary" | "danger" | "success";
   style?: CSSProperties;
+  onClick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ text, variant, style = {} }) => {
+const Button: FC<ButtonProps> = ({ children, variant, style }) => {
   return (
     <button
       className={`${styles.button} ${
-        variant ? styles[variant] : styles.primary
+        variant ? styles[variant] : styles.default
       }`}
       style={style}
     >
-      {text}
+      {children}
     </button>
   );
 };
